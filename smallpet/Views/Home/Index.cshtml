@@ -85,10 +85,10 @@
                         <div class="crd_body">
 
                             <p class="crd_title">
-                                @ViewBag.Pets[0].Name
+                                @ViewBag.Pets[1].Name
                             </p>
                             <p class="crd_text">
-                                @ViewBag.Pets[0].Text
+                                @ViewBag.Pets[1].Text
                             </p>
                             <div class="center">
                                 <button class="btn_search"><img src="~/Content/img/search.svg"></button>
@@ -98,12 +98,12 @@
                 </div>
                 <div class="col-md-4 col-sm-4 col-8">
                     <div class="crd lead">
-                        <img src=@ViewBag.Pets[2].Link>
+                        <img src=@ViewBag.Pets[ViewBag.Pets.Count-1].Link>
                         <div class="crd_body">
 
-                            <p class="crd_title">@ViewBag.Pets[0].Name</p>
+                            <p class="crd_title">@ViewBag.Pets[ViewBag.Pets.Count - 1].Name</p>
                             <p class="crd_text">
-                                @ViewBag.Pets[0].Text
+                                @ViewBag.Pets[ViewBag.Pets.Count - 1].Text
                             </p>
                             <div class="center">
                                 <button class="btn_search"><img src="~/Content/img/search.svg"></button>

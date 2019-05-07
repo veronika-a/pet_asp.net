@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Редактировать книгу";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+@model smallpet.Models.Pet
+
+
+<h2>Удаление книги</h2>
+<dl>
+    <dt>Название</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+    <dd>
+        @Html.DisplayFor(model => model.Text)
+    </dd>
+
+    <dt>Автор</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Author)
+    </dd>
+
+    <dt>Цена</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Link)
+    </dd>
+</dl>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Удалить" />
+}

@@ -1,17 +1,30 @@
-﻿@{
-    Layout = null;
+﻿
+@{
+    ViewBag.Title = "Редактировать книгу";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+@model smallpet.Models.Pet
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-    
-    </div>
-</body>
-</html>
+<h2>New Pet</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name, "Название книги")
+    <br />
+    @Html.EditorFor(model => model.Name)
+    <br /><br />
+    @Html.LabelFor(model => model.Text, "Text")
+    <br />
+    @Html.EditorFor(model => model.Text)
+    <br /><br />
+    @Html.LabelFor(model => model.Author, "Автор")
+    <br />
+    @Html.EditorFor(model => model.Author)
+    <br /><br />
+    @Html.LabelFor(model => model.Link, "Link")
+    <br />
+    @Html.EditorFor(model => model.Link)
+    <br /><br />
+    <input type="submit" value="Добавить" />
+}

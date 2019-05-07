@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using smallpet.Models;
 using System.Data.Entity;
+using System.Threading.Tasks;
 
 namespace smallpet.Controllers
 {
@@ -55,6 +56,43 @@ namespace smallpet.Controllers
             db.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            Pet b = db.Pets.Find(id);
+            if (b == null)
+            {
+                return HttpNotFound();
+            }
+            return View(b);
+        }
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Pet b = db.Pets.Find(id);
+            if (b == null)
+            {
+                return HttpNotFound();
+            }
+            db.Pets.Remove(b);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public async Task<ActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Pet pet = await db.Pets.FindAsync(id);
+            if (pet == null)
+            {
+                return HttpNotFound();
+            }
+            return View(pet);
         }
     }
 }
