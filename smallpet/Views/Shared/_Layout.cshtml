@@ -38,7 +38,7 @@
                                     </div>
 
                                     <div class="menu__links">
-                                        <span>@Html.ActionLink("Домашняя страница", "Index", "Home")</span>
+                                        <span class="menu__links-item">@Html.ActionLink("Home", "Index", "Home")</span>
                                         <a class="menu__links-item" href="/">
                                             MENU
                                         </a>
@@ -48,9 +48,7 @@
                                         <a class="menu__links-item" href="/">
                                             LOGIN
                                         </a>
-                                        <a class="menu__links-item" href="/">
-                                            TOUR
-                                        </a>
+                                        <span class="menu__links-item">@Html.ActionLink("Admin", "Index", "Admin")</span>
                                     </div>
                                 </div>
                             </nav>

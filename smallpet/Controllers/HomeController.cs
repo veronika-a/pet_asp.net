@@ -14,7 +14,11 @@ namespace smallpet.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Pets);
+            List<Pet> pet = new List<Pet>();
+            pet.AddRange(db.Pets);
+            ViewBag.Pets = pet;
+           
+            return View();
         }
 
         public ActionResult About()

@@ -7,7 +7,6 @@
     ViewBag.Title = "Pet";
 }
 
-
 <div class="cd-popup" role="alert">
     <div class="cd-popup-container">
 
@@ -16,26 +15,6 @@
 </div> <!-- cd-popup -->
 
 
-<div>
-    <h3>Статьи</h3>
-    <table>
-        <tr class="header">
-            <td><p>Название</p></td>
-            <td><p>Текст</p></td>
-            <td><p>Author</p></td>
-            <td></td>
-        </tr>
-        @foreach (smallpet.Models.Pet b in Model)
-        {
-            <tr>
-                <td><p>@b.Name</p></td>
-                <td><p>@b.Author</p></td>
-                <td><p>@b.Text</p></td>
-                <td><p><a href="/Home/Buy/@b.Id">Купить</a></p></td>
-            </tr>
-        }
-    </table>
-</div> 
 
 <div class="conteiner-fluid zi b2 ">
     <div class="row ">
@@ -89,11 +68,11 @@
 
                 <div class="col-md-4 col-sm-4 col-8">
                     <div class="crd lead">
-                        <img src="~/Content/img/c1.jpg">
+                        <img src=@ViewBag.Pets[0].Link>
                         <div class="crd_body">
 
-                            <p class="crd_title"></p>
-                            <p class="crd_text">Important advice every pet owner should know</p>
+                            <p class="crd_title">@ViewBag.Pets[0].Name</p>
+                            <p class="crd_text">@ViewBag.Pets[0].Text</p>
                             <div class="center">
                                 <button class="btn_search"><img src="~/Content/img/search.svg" asp-append-version="true"></button>
                             </div>
@@ -102,15 +81,14 @@
                 </div>
                 <div class="col-md-4 col-sm-4 col-8">
                     <div class="crd lead">
-                        <img src="~/Content/img/c2.jpg">
+                        <img src=@ViewBag.Pets[1].Link>
                         <div class="crd_body">
 
                             <p class="crd_title">
-                                Paws-On Activities
+                                @ViewBag.Pets[0].Name
                             </p>
                             <p class="crd_text">
-                                DIY crafts and training tips
-                                for animal lovers
+                                @ViewBag.Pets[0].Text
                             </p>
                             <div class="center">
                                 <button class="btn_search"><img src="~/Content/img/search.svg"></button>
@@ -120,12 +98,12 @@
                 </div>
                 <div class="col-md-4 col-sm-4 col-8">
                     <div class="crd lead">
-                        <img src="~/Content/img/c3.jpg">
+                        <img src=@ViewBag.Pets[2].Link>
                         <div class="crd_body">
 
-                            <p class="crd_title">Just for Fun</p>
+                            <p class="crd_title">@ViewBag.Pets[0].Name</p>
                             <p class="crd_text">
-                                IFun quotes, facts, and other pet-related content
+                                @ViewBag.Pets[0].Text
                             </p>
                             <div class="center">
                                 <button class="btn_search"><img src="~/Content/img/search.svg"></button>
