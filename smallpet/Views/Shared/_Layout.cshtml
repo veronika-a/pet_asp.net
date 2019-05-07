@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    @*<link rel="stylesheet" type="text/css" href="~/Content/css/pet.css">*@
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <title>Pets</title>
+    @Styles.Render("~/Content/css/css");
+
+</head>
+<body>
+    <div class="conteiner-fluid">
+
+        <div class="row">
+
+            <div class="col-md-12  img_smalldog">
+                <header>
+                    <div class="row">
+                        <div class="col-md-2 logo">
+                            JreminderMEDIA
+                        </div>
+                        <div class="col-md-9 ">
+                            <nav>
+                                <div class="menu">
+                                    <div class="menu__icon">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+
+                                    <div class="menu__links">
+                                        <span>@Html.ActionLink("Домашняя страница", "Index", "Home")</span>
+                                        <a class="menu__links-item" href="/">
+                                            MENU
+                                        </a>
+                                        <a class="menu__links-item" href="/">
+                                            BLOG
+                                        </a>
+                                        <a class="menu__links-item" href="/">
+                                            LOGIN
+                                        </a>
+                                        <a class="menu__links-item" href="/">
+                                            TOUR
+                                        </a>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+
+                    </div>
+
+                    <div class="row justify-content-end">
+                        <div class="col-md-6">
+                            <div class="row justify-content-center">
+                                <p class="z1">PET</p>
+                            </div>
+                            <div class="row justify-content-center">
+                                <p class="z2">POWER</p>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-md-7 center">
+                                    Use exclusive content in issue 77 to make an
+                                    emotional connection with your clients.
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <button class="btn_red"> LEARN MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Имя приложения", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
+                    <li>@Html.ActionLink("О программе", "About", "Home")</li>
+                    <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+       -->
+    @RenderBody()
+    <footer>
+        <div class="conteiner-fluid zi">
+            <div class="row footer">
+
+                <div class="col-md-6">
+                    JIM © 2015 REMINDERMEDIA. ALL RIGHTS RESERVED.
+
+                </div>
+                <div class="col-md-6 fut_menu">
+                    <ul>
+                        <li>PRIVACY POLICY</li>
+                        <li><a href="#0" class="cd-popup-trigger">CONTACT US</a> </li>
+                        <li>ACCOUNT LOG-IN</li>
+                        <li>CAREERS</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    @Styles.Render("~/Content/js/js");
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

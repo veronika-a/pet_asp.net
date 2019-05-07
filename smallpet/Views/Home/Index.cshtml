@@ -1,0 +1,169 @@
+﻿@model IEnumerable<smallpet.Models.Pet>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+@{
+    ViewBag.Title = "Pet";
+}
+
+
+<div class="cd-popup" role="alert">
+    <div class="cd-popup-container">
+
+        <a href="#0" class="cd-popup-close img-replace"></a>
+    </div> <!-- cd-popup-container -->
+</div> <!-- cd-popup -->
+
+
+<div>
+    <h3>Статьи</h3>
+    <table>
+        <tr class="header">
+            <td><p>Название</p></td>
+            <td><p>Текст</p></td>
+            <td><p>Author</p></td>
+            <td></td>
+        </tr>
+        @foreach (smallpet.Models.Pet b in Model)
+        {
+            <tr>
+                <td><p>@b.Name</p></td>
+                <td><p>@b.Author</p></td>
+                <td><p>@b.Text</p></td>
+                <td><p><a href="/Home/Buy/@b.Id">Купить</a></p></td>
+            </tr>
+        }
+    </table>
+</div> 
+
+<div class="conteiner-fluid zi b2 ">
+    <div class="row ">
+        <div class="col-md-12">
+            <div class="row  justify-content-center">
+                <div class="col-md-12 z4 ">
+                    fETCH MORE REFERRALS WITH ISSUE 77.
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-5 z5">
+                    Pets are more than just companions for their owners:
+                    they are part of the family. The mere sight or mention of a
+                    four-legged friend is enough to bring a smile to most
+                    pet owners' faces. And you can tap into this
+                    emotion when you upgrade to Platinum for Issue 77.
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <button class="btn_red">PREVIEW THE NEW DESIGNS</button>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 img_cat">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="conteiner-fluid  zi">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 exclusive">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 z4  ">
+                    EXCLUSIVE NEW DESIGN OPTIONS
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-sm-10 z5 scrollup">
+                    New Back Cover, Back Inside Cover, and Tear Out Card designs-available
+                    exclusively to Platinum customers-harness the power of pets to build
+                    emotional connections and open the lines of communication.
+                </div>
+            </div>
+            <div class="row justify-content-center ">
+                <div class="col-md-10 col-sm-10 choose z5 scrollup">
+                    Choose from three categories to break the ice with your pet-loving clients.
+                </div>
+            </div>
+            <div class="row justify-content-center crds ">
+
+                <div class="col-md-4 col-sm-4 col-8">
+                    <div class="crd lead">
+                        <img src="~/Content/img/c1.jpg">
+                        <div class="crd_body">
+
+                            <p class="crd_title"></p>
+                            <p class="crd_text">Important advice every pet owner should know</p>
+                            <div class="center">
+                                <button class="btn_search"><img src="~/Content/img/search.svg" asp-append-version="true"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-8">
+                    <div class="crd lead">
+                        <img src="~/Content/img/c2.jpg">
+                        <div class="crd_body">
+
+                            <p class="crd_title">
+                                Paws-On Activities
+                            </p>
+                            <p class="crd_text">
+                                DIY crafts and training tips
+                                for animal lovers
+                            </p>
+                            <div class="center">
+                                <button class="btn_search"><img src="~/Content/img/search.svg"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-8">
+                    <div class="crd lead">
+                        <img src="~/Content/img/c3.jpg">
+                        <div class="crd_body">
+
+                            <p class="crd_title">Just for Fun</p>
+                            <p class="crd_text">
+                                IFun quotes, facts, and other pet-related content
+                            </p>
+                            <div class="center">
+                                <button class="btn_search"><img src="~/Content/img/search.svg"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-3 img_dog">
+
+        </div>
+    </div>
+</div>
+<div class="conteiner-fluid zi">
+    <div class="row img_woman justify-content-end">
+        <div class="col-lg-4 col-md-6 col-sm-11 col-12 stay">
+            <div class="row justify-content-center z4">
+                <div class="col-md-12">
+                    STAY CONNECTED ON SOCIAL MEDIA.
+                </div>
+
+            </div>
+            <div class="row z5">
+                <div class="col-md-12">
+                    Keep the conversation going and spark new engagement by sharing pet-related content on social media and e-mail. In addition to the information in the designs above, you can share exclusive, downloadable resources that add even more value to your relationship marketing efforts.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn_red">
+                        LOG IN TO START CONNECTING
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
